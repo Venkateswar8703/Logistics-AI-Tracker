@@ -1,0 +1,31 @@
+/* ===== Chat Page ===== */
+.chat-page {
+  max-width: 900px;
+  height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-page-header {
+  margin-bottom: 20px;
+  animation: fadeIn 0.5s ease;
+  flex-shrink: 0;
+}
+
+.chat-page-subtitle {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.chat-page .chat-assistant {
+  flex: 1;
+  max-height: none;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .chat-page {
+    height: calc(100vh - 48px);
+  }
+}

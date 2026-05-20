@@ -1,0 +1,22 @@
+[
+  {"id": "FR-001", "origin": "Shanghai, China", "destination": "Los Angeles, USA", "carrier": "CMA CGM", "mode": "Sea", "rate_per_kg": 1.85, "currency": "USD", "transit_days": 18, "last_updated": "2026-05-01"},
+  {"id": "FR-002", "origin": "Mumbai, India", "destination": "Rotterdam, Netherlands", "carrier": "Maersk", "mode": "Sea", "rate_per_kg": 1.65, "currency": "USD", "transit_days": 22, "last_updated": "2026-05-01"},
+  {"id": "FR-003", "origin": "Dubai, UAE", "destination": "London, UK", "carrier": "DHL Global Forwarding", "mode": "Air", "rate_per_kg": 4.50, "currency": "USD", "transit_days": 3, "last_updated": "2026-05-05"},
+  {"id": "FR-004", "origin": "Hamburg, Germany", "destination": "New York, USA", "carrier": "Hapag-Lloyd", "mode": "Sea", "rate_per_kg": 1.90, "currency": "USD", "transit_days": 14, "last_updated": "2026-05-03"},
+  {"id": "FR-005", "origin": "Tokyo, Japan", "destination": "Sydney, Australia", "carrier": "FedEx", "mode": "Air", "rate_per_kg": 5.20, "currency": "USD", "transit_days": 2, "last_updated": "2026-05-10"},
+  {"id": "FR-006", "origin": "Singapore", "destination": "Dubai, UAE", "carrier": "Maersk", "mode": "Sea", "rate_per_kg": 1.40, "currency": "USD", "transit_days": 12, "last_updated": "2026-05-02"},
+  {"id": "FR-007", "origin": "São Paulo, Brazil", "destination": "Antwerp, Belgium", "carrier": "MSC", "mode": "Sea", "rate_per_kg": 2.10, "currency": "USD", "transit_days": 20, "last_updated": "2026-05-08"},
+  {"id": "FR-008", "origin": "Chicago, USA", "destination": "Toronto, Canada", "carrier": "UPS Freight", "mode": "Road", "rate_per_kg": 0.95, "currency": "USD", "transit_days": 3, "last_updated": "2026-05-12"},
+  {"id": "FR-009", "origin": "Delhi, India", "destination": "Frankfurt, Germany", "carrier": "Lufthansa Cargo", "mode": "Air", "rate_per_kg": 4.80, "currency": "USD", "transit_days": 2, "last_updated": "2026-05-06"},
+  {"id": "FR-010", "origin": "Busan, South Korea", "destination": "Hamburg, Germany", "carrier": "Hapag-Lloyd", "mode": "Sea", "rate_per_kg": 1.75, "currency": "USD", "transit_days": 28, "last_updated": "2026-05-04"},
+  {"id": "FR-011", "origin": "Los Angeles, USA", "destination": "Shanghai, China", "carrier": "Evergreen Marine", "mode": "Sea", "rate_per_kg": 1.95, "currency": "USD", "transit_days": 16, "last_updated": "2026-05-09"},
+  {"id": "FR-012", "origin": "Rotterdam, Netherlands", "destination": "Mumbai, India", "carrier": "Maersk", "mode": "Sea", "rate_per_kg": 1.70, "currency": "USD", "transit_days": 24, "last_updated": "2026-05-07"},
+  {"id": "FR-013", "origin": "Beijing, China", "destination": "Moscow, Russia", "carrier": "China Railway Express", "mode": "Rail", "rate_per_kg": 1.20, "currency": "USD", "transit_days": 15, "last_updated": "2026-05-11"},
+  {"id": "FR-014", "origin": "Berlin, Germany", "destination": "Warsaw, Poland", "carrier": "DB Schenker", "mode": "Road", "rate_per_kg": 0.80, "currency": "USD", "transit_days": 2, "last_updated": "2026-05-14"},
+  {"id": "FR-015", "origin": "Chongqing, China", "destination": "Duisburg, Germany", "carrier": "China Railway Express", "mode": "Rail", "rate_per_kg": 1.35, "currency": "USD", "transit_days": 18, "last_updated": "2026-05-13"},
+  {"id": "FR-016", "origin": "Melbourne, Australia", "destination": "Auckland, New Zealand", "carrier": "ANL Container Line", "mode": "Sea", "rate_per_kg": 1.30, "currency": "USD", "transit_days": 5, "last_updated": "2026-05-15"},
+  {"id": "FR-017", "origin": "Nairobi, Kenya", "destination": "Guangzhou, China", "carrier": "DHL Global Forwarding", "mode": "Air", "rate_per_kg": 5.60, "currency": "USD", "transit_days": 4, "last_updated": "2026-05-10"},
+  {"id": "FR-018", "origin": "Paris, France", "destination": "Milan, Italy", "carrier": "DB Schenker", "mode": "Road", "rate_per_kg": 0.70, "currency": "USD", "transit_days": 1, "last_updated": "2026-05-16"},
+  {"id": "FR-019", "origin": "Shenzhen, China", "destination": "Dubai, UAE", "carrier": "COSCO Shipping", "mode": "Sea", "rate_per_kg": 1.55, "currency": "USD", "transit_days": 14, "last_updated": "2026-05-12"},
+  {"id": "FR-020", "origin": "London, UK", "destination": "New York, USA", "carrier": "British Airways Cargo", "mode": "Air", "rate_per_kg": 4.90, "currency": "USD", "transit_days": 2, "last_updated": "2026-05-18"}
+]

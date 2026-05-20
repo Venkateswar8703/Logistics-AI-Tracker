@@ -1,0 +1,271 @@
+[
+  {
+    "id": "shp-001-uuid",
+    "tracking_number": "SHP-001",
+    "origin": "Mumbai, India",
+    "destination": "Rotterdam, Netherlands",
+    "status": "In Transit",
+    "carrier": "Maersk",
+    "weight_kg": 12500.0,
+    "estimated_delivery": "2026-06-02",
+    "current_location": "Arabian Sea, En Route",
+    "created_at": "2026-05-01T08:00:00Z",
+    "timeline": [
+      {"timestamp": "2026-05-01T08:00:00Z", "location": "Mumbai, India", "status": "Processing", "description": "Shipment received at Nhava Sheva port warehouse"},
+      {"timestamp": "2026-05-02T14:30:00Z", "location": "Mumbai, India", "status": "Processing", "description": "Customs documentation cleared; container loaded onto vessel"},
+      {"timestamp": "2026-05-03T06:00:00Z", "location": "Mumbai, India", "status": "In Transit", "description": "Vessel departed Nhava Sheva port"},
+      {"timestamp": "2026-05-12T18:00:00Z", "location": "Arabian Sea", "status": "In Transit", "description": "Vessel passed Suez Canal checkpoint"}
+    ]
+  },
+  {
+    "id": "shp-002-uuid",
+    "tracking_number": "SHP-002",
+    "origin": "Shanghai, China",
+    "destination": "Los Angeles, USA",
+    "status": "Delivered",
+    "carrier": "CMA CGM",
+    "weight_kg": 8400.0,
+    "estimated_delivery": "2026-05-15",
+    "current_location": "Los Angeles, USA",
+    "created_at": "2026-04-25T10:00:00Z",
+    "timeline": [
+      {"timestamp": "2026-04-25T10:00:00Z", "location": "Shanghai, China", "status": "Processing", "description": "Cargo inspected and sealed at Yangshan Deep Water Port"},
+      {"timestamp": "2026-04-26T20:00:00Z", "location": "Shanghai, China", "status": "In Transit", "description": "Vessel departed Shanghai"},
+      {"timestamp": "2026-05-10T08:00:00Z", "location": "Pacific Ocean", "status": "In Transit", "description": "Vessel approaching US West Coast"},
+      {"timestamp": "2026-05-14T12:00:00Z", "location": "Los Angeles, USA", "status": "Out for Delivery", "description": "Container cleared customs at Port of Los Angeles"},
+      {"timestamp": "2026-05-15T09:30:00Z", "location": "Los Angeles, USA", "status": "Delivered", "description": "Shipment delivered to consignee warehouse"}
+    ]
+  },
+  {
+    "id": "shp-003-uuid",
+    "tracking_number": "SHP-003",
+    "origin": "Dubai, UAE",
+    "destination": "London, UK",
+    "status": "Delayed",
+    "carrier": "DHL Global Forwarding",
+    "weight_kg": 3200.0,
+    "estimated_delivery": "2026-05-18",
+    "current_location": "Istanbul, Turkey",
+    "created_at": "2026-05-05T06:00:00Z",
+    "timeline": [
+      {"timestamp": "2026-05-05T06:00:00Z", "location": "Dubai, UAE", "status": "Processing", "description": "Shipment booked; air freight documentation initiated"},
+      {"timestamp": "2026-05-06T15:00:00Z", "location": "Dubai, UAE", "status": "In Transit", "description": "Cargo loaded onto aircraft at DXB"},
+      {"timestamp": "2026-05-06T22:00:00Z", "location": "Istanbul, Turkey", "status": "In Transit", "description": "Layover at Istanbul Airport — connecting flight"},
+      {"timestamp": "2026-05-08T10:00:00Z", "location": "Istanbul, Turkey", "status": "Delayed", "description": "Delay due to severe weather; connecting flight postponed 48 hours"}
+    ]
+  },
+  {
+    "id": "shp-004-uuid",
+    "tracking_number": "SHP-004",
+    "origin": "Hamburg, Germany",
+    "destination": "New York, USA",
+    "status": "Customs Hold",
+    "carrier": "Hapag-Lloyd",
+    "weight_kg": 15600.0,
+    "estimated_delivery": "2026-05-28",
+    "current_location": "New York, USA",
+    "created_at": "2026-05-08T07:00:00Z",
+    "timeline": [
+      {"timestamp": "2026-05-08T07:00:00Z", "location": "Hamburg, Germany", "status": "Processing", "description": "Container packed and weighed at Hamburg terminal"},
+      {"timestamp": "2026-05-09T16:00:00Z", "location": "Hamburg, Germany", "status": "In Transit", "description": "Vessel departed Hamburg port"},
+      {"timestamp": "2026-05-19T14:00:00Z", "location": "New York, USA", "status": "In Transit", "description": "Vessel arrived at Port Newark"},
+      {"timestamp": "2026-05-20T09:00:00Z", "location": "New York, USA", "status": "Customs Hold", "description": "Shipment held for additional customs inspection — documentation review"}
+    ]
+  },
+  {
+    "id": "shp-005-uuid",
+    "tracking_number": "SHP-005",
+    "origin": "Tokyo, Japan",
+    "destination": "Sydney, Australia",
+    "status": "Out for Delivery",
+    "carrier": "FedEx",
+    "weight_kg": 450.0,
+    "estimated_delivery": "2026-05-21",
+    "current_location": "Sydney, Australia",
+    "created_at": "2026-05-16T09:00:00Z",
+    "timeline": [
+      {"timestamp": "2026-05-16T09:00:00Z", "location": "Tokyo, Japan", "status": "Processing", "description": "Express package picked up from shipper in Shibuya"},
+      {"timestamp": "2026-05-16T22:00:00Z", "location": "Tokyo, Japan", "status": "In Transit", "description": "Package departed Narita Airport on overnight flight"},
+      {"timestamp": "2026-05-17T12:00:00Z", "location": "Sydney, Australia", "status": "In Transit", "description": "Package arrived at Sydney Kingsford Smith Airport"},
+      {"timestamp": "2026-05-20T08:00:00Z", "location": "Sydney, Australia", "status": "Out for Delivery", "description": "Package loaded onto delivery vehicle — delivery scheduled today"}
+    ]
+  },
+  {
+    "id": "shp-006-uuid",
+    "tracking_number": "SHP-006",
+    "origin": "Singapore",
+    "destination": "Dubai, UAE",
+    "status": "In Transit",
+    "carrier": "Maersk",
+    "weight_kg": 9800.0,
+    "estimated_delivery": "2026-05-30",
+    "current_location": "Indian Ocean, En Route",
+    "created_at": "2026-05-10T11:00:00Z",
+    "timeline": [
+      {"timestamp": "2026-05-10T11:00:00Z", "location": "Singapore", "status": "Processing", "description": "Cargo received at Tuas Mega Port"},
+      {"timestamp": "2026-05-11T18:00:00Z", "location": "Singapore", "status": "In Transit", "description": "Vessel departed Singapore Strait"},
+      {"timestamp": "2026-05-18T06:00:00Z", "location": "Indian Ocean", "status": "In Transit", "description": "Vessel transiting Indian Ocean; ETA on schedule"}
+    ]
+  },
+  {
+    "id": "shp-007-uuid",
+    "tracking_number": "SHP-007",
+    "origin": "São Paulo, Brazil",
+    "destination": "Antwerp, Belgium",
+    "status": "In Transit",
+    "carrier": "MSC",
+    "weight_kg": 21000.0,
+    "estimated_delivery": "2026-06-05",
+    "current_location": "Atlantic Ocean, En Route",
+    "created_at": "2026-05-12T14:00:00Z",
+    "timeline": [
+      {"timestamp": "2026-05-12T14:00:00Z", "location": "São Paulo, Brazil", "status": "Processing", "description": "Container transported from inland warehouse to Santos port"},
+      {"timestamp": "2026-05-13T08:00:00Z", "location": "Santos, Brazil", "status": "Processing", "description": "Customs export clearance completed"},
+      {"timestamp": "2026-05-14T17:00:00Z", "location": "Santos, Brazil", "status": "In Transit", "description": "Vessel departed Santos port"},
+      {"timestamp": "2026-05-20T10:00:00Z", "location": "Atlantic Ocean", "status": "In Transit", "description": "Mid-Atlantic — vessel progressing on schedule"}
+    ]
+  },
+  {
+    "id": "shp-008-uuid",
+    "tracking_number": "SHP-008",
+    "origin": "Shenzhen, China",
+    "destination": "Dubai, UAE",
+    "status": "Delivered",
+    "carrier": "COSCO Shipping",
+    "weight_kg": 6700.0,
+    "estimated_delivery": "2026-05-16",
+    "current_location": "Dubai, UAE",
+    "created_at": "2026-04-28T05:00:00Z",
+    "timeline": [
+      {"timestamp": "2026-04-28T05:00:00Z", "location": "Shenzhen, China", "status": "Processing", "description": "Shipment received at Yantian International Container Terminal"},
+      {"timestamp": "2026-04-29T12:00:00Z", "location": "Shenzhen, China", "status": "In Transit", "description": "Vessel departed Yantian port"},
+      {"timestamp": "2026-05-12T09:00:00Z", "location": "Strait of Malacca", "status": "In Transit", "description": "Vessel transiting Strait of Malacca"},
+      {"timestamp": "2026-05-15T16:00:00Z", "location": "Dubai, UAE", "status": "Out for Delivery", "description": "Container unloaded at Jebel Ali port"},
+      {"timestamp": "2026-05-16T11:00:00Z", "location": "Dubai, UAE", "status": "Delivered", "description": "Shipment delivered to consignee at Dubai Logistics City"}
+    ]
+  },
+  {
+    "id": "shp-009-uuid",
+    "tracking_number": "SHP-009",
+    "origin": "Chicago, USA",
+    "destination": "Toronto, Canada",
+    "status": "Delivered",
+    "carrier": "UPS Freight",
+    "weight_kg": 1800.0,
+    "estimated_delivery": "2026-05-14",
+    "current_location": "Toronto, Canada",
+    "created_at": "2026-05-11T13:00:00Z",
+    "timeline": [
+      {"timestamp": "2026-05-11T13:00:00Z", "location": "Chicago, USA", "status": "Processing", "description": "Freight picked up from shipper warehouse in Chicago"},
+      {"timestamp": "2026-05-12T04:00:00Z", "location": "Detroit, USA", "status": "In Transit", "description": "Truck arrived at Detroit cross-dock facility"},
+      {"timestamp": "2026-05-12T14:00:00Z", "location": "Windsor, Canada", "status": "In Transit", "description": "Customs cleared at Ambassador Bridge border crossing"},
+      {"timestamp": "2026-05-13T18:00:00Z", "location": "Toronto, Canada", "status": "Out for Delivery", "description": "Shipment at Toronto distribution centre"},
+      {"timestamp": "2026-05-14T10:00:00Z", "location": "Toronto, Canada", "status": "Delivered", "description": "Delivered to consignee — signed by J. Thompson"}
+    ]
+  },
+  {
+    "id": "shp-010-uuid",
+    "tracking_number": "SHP-010",
+    "origin": "Busan, South Korea",
+    "destination": "Hamburg, Germany",
+    "status": "Delayed",
+    "carrier": "Hapag-Lloyd",
+    "weight_kg": 14200.0,
+    "estimated_delivery": "2026-05-25",
+    "current_location": "Colombo, Sri Lanka",
+    "created_at": "2026-05-02T10:00:00Z",
+    "timeline": [
+      {"timestamp": "2026-05-02T10:00:00Z", "location": "Busan, South Korea", "status": "Processing", "description": "Container received at Busan New Port"},
+      {"timestamp": "2026-05-03T20:00:00Z", "location": "Busan, South Korea", "status": "In Transit", "description": "Vessel departed Busan"},
+      {"timestamp": "2026-05-14T08:00:00Z", "location": "Colombo, Sri Lanka", "status": "In Transit", "description": "Transshipment stop at Colombo port"},
+      {"timestamp": "2026-05-15T16:00:00Z", "location": "Colombo, Sri Lanka", "status": "Delayed", "description": "Port congestion at Colombo — vessel berthing delayed by 72 hours"}
+    ]
+  },
+  {
+    "id": "shp-011-uuid",
+    "tracking_number": "SHP-011",
+    "origin": "Melbourne, Australia",
+    "destination": "Auckland, New Zealand",
+    "status": "Processing",
+    "carrier": "ANL Container Line",
+    "weight_kg": 4500.0,
+    "estimated_delivery": "2026-05-29",
+    "current_location": "Melbourne, Australia",
+    "created_at": "2026-05-19T07:00:00Z",
+    "timeline": [
+      {"timestamp": "2026-05-19T07:00:00Z", "location": "Melbourne, Australia", "status": "Processing", "description": "Booking confirmed; awaiting cargo delivery to port"},
+      {"timestamp": "2026-05-20T09:00:00Z", "location": "Melbourne, Australia", "status": "Processing", "description": "Cargo arrived at Melbourne container yard — awaiting packing"}
+    ]
+  },
+  {
+    "id": "shp-012-uuid",
+    "tracking_number": "SHP-012",
+    "origin": "Rotterdam, Netherlands",
+    "destination": "Mumbai, India",
+    "status": "In Transit",
+    "carrier": "Maersk",
+    "weight_kg": 11300.0,
+    "estimated_delivery": "2026-06-10",
+    "current_location": "Mediterranean Sea, En Route",
+    "created_at": "2026-05-14T08:00:00Z",
+    "timeline": [
+      {"timestamp": "2026-05-14T08:00:00Z", "location": "Rotterdam, Netherlands", "status": "Processing", "description": "Container loaded at Europoort terminal"},
+      {"timestamp": "2026-05-15T06:00:00Z", "location": "Rotterdam, Netherlands", "status": "In Transit", "description": "Vessel departed Rotterdam"},
+      {"timestamp": "2026-05-20T14:00:00Z", "location": "Mediterranean Sea", "status": "In Transit", "description": "Vessel transiting Mediterranean Sea — all on schedule"}
+    ]
+  },
+  {
+    "id": "shp-013-uuid",
+    "tracking_number": "SHP-013",
+    "origin": "Nairobi, Kenya",
+    "destination": "Guangzhou, China",
+    "status": "Customs Hold",
+    "carrier": "DHL Global Forwarding",
+    "weight_kg": 2800.0,
+    "estimated_delivery": "2026-05-26",
+    "current_location": "Mombasa, Kenya",
+    "created_at": "2026-05-09T09:00:00Z",
+    "timeline": [
+      {"timestamp": "2026-05-09T09:00:00Z", "location": "Nairobi, Kenya", "status": "Processing", "description": "Freight collected from shipper in Nairobi industrial area"},
+      {"timestamp": "2026-05-10T16:00:00Z", "location": "Mombasa, Kenya", "status": "Processing", "description": "Cargo transported to Mombasa port by road"},
+      {"timestamp": "2026-05-11T10:00:00Z", "location": "Mombasa, Kenya", "status": "Customs Hold", "description": "Export documentation flagged — additional phytosanitary certificates required"}
+    ]
+  },
+  {
+    "id": "shp-014-uuid",
+    "tracking_number": "SHP-014",
+    "origin": "Los Angeles, USA",
+    "destination": "Shanghai, China",
+    "status": "In Transit",
+    "carrier": "Evergreen Marine",
+    "weight_kg": 7600.0,
+    "estimated_delivery": "2026-06-08",
+    "current_location": "Pacific Ocean, En Route",
+    "created_at": "2026-05-15T12:00:00Z",
+    "timeline": [
+      {"timestamp": "2026-05-15T12:00:00Z", "location": "Los Angeles, USA", "status": "Processing", "description": "Container received at APM Terminals, Port of LA"},
+      {"timestamp": "2026-05-16T10:00:00Z", "location": "Los Angeles, USA", "status": "Processing", "description": "Export customs clearance completed"},
+      {"timestamp": "2026-05-17T18:00:00Z", "location": "Los Angeles, USA", "status": "In Transit", "description": "Vessel departed Port of Los Angeles"},
+      {"timestamp": "2026-05-20T22:00:00Z", "location": "Pacific Ocean", "status": "In Transit", "description": "Vessel mid-Pacific — ETA remains on schedule"}
+    ]
+  },
+  {
+    "id": "shp-015-uuid",
+    "tracking_number": "SHP-015",
+    "origin": "Delhi, India",
+    "destination": "Frankfurt, Germany",
+    "status": "Out for Delivery",
+    "carrier": "Lufthansa Cargo",
+    "weight_kg": 920.0,
+    "estimated_delivery": "2026-05-21",
+    "current_location": "Frankfurt, Germany",
+    "created_at": "2026-05-17T05:00:00Z",
+    "timeline": [
+      {"timestamp": "2026-05-17T05:00:00Z", "location": "Delhi, India", "status": "Processing", "description": "Air freight consignment accepted at IGI Airport cargo terminal"},
+      {"timestamp": "2026-05-17T23:00:00Z", "location": "Delhi, India", "status": "In Transit", "description": "Cargo loaded onto LH761 — departed Delhi"},
+      {"timestamp": "2026-05-18T06:00:00Z", "location": "Frankfurt, Germany", "status": "In Transit", "description": "Aircraft landed at Frankfurt Airport"},
+      {"timestamp": "2026-05-19T14:00:00Z", "location": "Frankfurt, Germany", "status": "In Transit", "description": "Import customs clearance completed"},
+      {"timestamp": "2026-05-20T08:00:00Z", "location": "Frankfurt, Germany", "status": "Out for Delivery", "description": "Shipment dispatched from Frankfurt logistics hub for final delivery"}
+    ]
+  }
+]

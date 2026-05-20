@@ -1,0 +1,99 @@
+LOGISTICS AI TRACKER — SHIPPING POLICIES & PROCEDURES
+======================================================
+
+1. GENERAL SHIPPING POLICY
+--------------------------
+All shipments processed through the Logistics AI Tracker platform are subject to the
+policies outlined in this document. Our platform supports four primary modes of freight
+transport: Sea (ocean freight), Air (air cargo), Road (trucking / ground transport), and
+Rail (intermodal rail freight). Each mode has specific handling requirements, transit time
+expectations, and documentation obligations that shippers and consignees must adhere to.
+
+Shipments are accepted on a first-come, first-served basis. Booking confirmation is issued
+once all required documentation has been submitted and validated. The platform reserves
+the right to refuse any shipment that does not comply with applicable international trade
+regulations, hazardous materials guidelines, or customs requirements.
+
+2. PACKAGING & HANDLING PROCEDURES
+-----------------------------------
+Proper packaging is the responsibility of the shipper. All goods must be packed in
+containers or packaging suitable for the chosen transport mode. Key guidelines include:
+
+  • Sea Freight: Cargo must be palletised or containerised. Loose cargo is not accepted
+    unless a flat-rack or open-top container booking has been confirmed. Maximum weight
+    per TEU (Twenty-foot Equivalent Unit) is 28,000 kg. Overweight containers will be
+    rejected at the port gate.
+
+  • Air Freight: Packages must conform to IATA Dangerous Goods Regulations if applicable.
+    Maximum single-piece weight is 250 kg unless prior arrangement is made with the
+    carrier. All air cargo must include a shipper's declaration and air waybill.
+
+  • Road Freight: Full Truck Load (FTL) and Less-than-Truck Load (LTL) services are
+    available. Goods must be secured to prevent shifting during transit. Load height must
+    not exceed 2.7 metres for standard trailers.
+
+  • Rail Freight: Containers must comply with ISO 668 standards. Intermodal containers
+    are preferred. Bulk cargo rail services are available on select corridors (e.g.,
+    China–Europe via the Trans-Siberian or Southern Corridor routes).
+
+Fragile or temperature-sensitive goods require additional handling instructions submitted
+at the time of booking. Failure to declare special handling requirements releases the
+carrier and the platform from liability for damage incurred during transit.
+
+3. INSURANCE POLICY
+--------------------
+Cargo insurance is optional but strongly recommended. The Logistics AI Tracker platform
+partners with leading marine and cargo insurance providers to offer competitive coverage.
+Three tiers of insurance are available:
+
+  • Basic Coverage: Covers total loss due to vessel sinking, aircraft crash, or major
+    accident. Does not cover partial loss, theft, or weather-related damage. Premium:
+    0.15% of declared cargo value.
+
+  • Standard Coverage: Covers total loss, partial loss, theft, and water damage.
+    Excludes damage due to improper packaging or inherent vice. Premium: 0.35% of
+    declared cargo value.
+
+  • Comprehensive Coverage: All-risk coverage including damage from delays, improper
+    handling, temperature excursion, and natural disasters. Premium: 0.60% of declared
+    cargo value.
+
+Insurance claims must be filed within 30 days of delivery (or expected delivery date in
+the case of lost shipments). Supporting documentation — including photographs, survey
+reports, and the original bill of lading — must accompany all claims.
+
+4. DOCUMENTATION REQUIREMENTS
+------------------------------
+The following documents are required for international shipments:
+
+  • Commercial Invoice: Itemised invoice with HS codes, unit values, and total value.
+  • Packing List: Detailed breakdown of packages, weights, and dimensions.
+  • Bill of Lading (Sea) / Air Waybill (Air) / CMR Consignment Note (Road): Transport
+    document issued by the carrier.
+  • Certificate of Origin: Required for tariff preference or trade agreement benefits.
+  • Customs Declaration: Filed electronically via the platform's integrated customs
+    module.
+  • Phytosanitary / Health Certificates: Required for agricultural, food, and biological
+    products.
+  • Dangerous Goods Declaration: Mandatory for hazardous materials under IMDG, IATA DGR,
+    or ADR regulations.
+
+Incomplete documentation will result in shipment holds at origin or destination customs.
+The platform provides automated document-checking at the time of booking to minimise
+delays.
+
+5. LIABILITY & LIMITATIONS
+---------------------------
+Carrier liability is governed by the applicable international convention for each mode:
+
+  • Sea: Hague-Visby Rules — liability capped at 2 SDR per kg or 666.67 SDR per package.
+  • Air: Montreal Convention — liability capped at 22 SDR per kg.
+  • Road: CMR Convention — liability capped at 8.33 SDR per kg.
+  • Rail: CIM/COTIF Rules — liability capped at 17 SDR per kg.
+
+The Logistics AI Tracker platform acts as a digital freight forwarder and intermediary.
+Platform liability is limited to booking accuracy and information correctness. Physical
+custody liability remains with the carrier at all times.
+
+For any disputes or policy clarifications, contact support@logistics-ai-tracker.com or
+use the in-app chat assistant.

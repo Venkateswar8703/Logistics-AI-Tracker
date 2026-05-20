@@ -1,0 +1,137 @@
+LOGISTICS AI TRACKER — FREIGHT RATE GUIDE
+==========================================
+
+1. INTRODUCTION
+----------------
+Understanding freight rates is essential for effective supply-chain cost management.
+This guide explains how rates are structured on the Logistics AI Tracker platform,
+the surcharges that may apply, seasonal pricing patterns, and practical negotiation
+strategies to help shippers secure the best possible rates.
+
+2. RATE STRUCTURE OVERVIEW
+---------------------------
+Freight rates on the platform are quoted as a per-kilogram charge in US Dollars (USD).
+The base rate covers the primary transport leg from origin to destination. Rates vary
+by several factors:
+
+  • Transport Mode:
+    - Sea Freight: Typically the most cost-effective for heavy or bulk cargo.
+      Rates range from $0.70/kg to $2.50/kg depending on route and carrier.
+    - Air Freight: Premium service for time-sensitive or high-value cargo.
+      Rates range from $3.50/kg to $8.00/kg. Express services can exceed $10/kg.
+    - Road Freight: Competitive for intra-continental routes (e.g., Europe, North
+      America). Rates range from $0.50/kg to $1.50/kg.
+    - Rail Freight: An emerging alternative for China–Europe corridors. Faster than
+      sea, cheaper than air. Rates range from $1.00/kg to $2.00/kg.
+
+  • Route / Trade Lane:
+    High-volume trade lanes (e.g., Shanghai–Los Angeles, Rotterdam–Singapore) tend
+    to have lower rates due to carrier competition and economies of scale. Niche or
+    low-volume routes carry a premium.
+
+  • Cargo Weight & Volume:
+    Rates improve with higher volumes. The platform supports volume-based discounts:
+      - Under 100 kg: Standard rate.
+      - 100–1,000 kg: 5% discount on base rate.
+      - 1,000–10,000 kg: 10% discount on base rate.
+      - Over 10,000 kg: Custom quote — contact sales for negotiated pricing.
+
+  • Carrier Selection:
+    Premium carriers with better reliability metrics (on-time performance, damage
+    rates) typically charge 10–20% above market average. Budget carriers offer
+    savings but may have longer transit times or fewer schedule options.
+
+3. SURCHARGES & ACCESSORIAL FEES
+----------------------------------
+The base rate does not include the following surcharges, which are applied as
+applicable:
+
+  • Bunker Adjustment Factor (BAF): Covers fuel cost fluctuations for sea freight.
+    Currently ranges from $50–$200 per TEU depending on oil prices.
+
+  • Currency Adjustment Factor (CAF): Applied when the billing currency differs from
+    the carrier's base currency. Typically 2–5% of the base rate.
+
+  • Peak Season Surcharge (PSS): Applied during high-demand periods (see Section 4).
+    Can add $200–$500 per TEU for sea freight; 15–30% on air freight rates.
+
+  • Security Surcharge: Post-9/11 mandatory charge for air cargo. Flat $0.05/kg.
+
+  • Dangerous Goods Surcharge: For IMDG/IATA-classified hazardous materials. Varies
+    by class; typically $150–$500 per shipment.
+
+  • Overweight / Over-dimensional Surcharge: For cargo exceeding standard container
+    weight limits or requiring special equipment (flat-racks, open-tops).
+
+  • Terminal Handling Charges (THC): Port-side handling at origin and destination.
+    Ranges from $100–$300 per TEU.
+
+  • Customs Brokerage Fees: For customs clearance facilitation. Flat fee of $50–$150
+    per shipment or ad valorem (0.5% of cargo value).
+
+  • Inland Haulage: Door-to-port or port-to-door trucking charges. Quoted separately
+    based on distance and local rates.
+
+4. SEASONAL VARIATIONS
+------------------------
+Freight rates are subject to significant seasonal fluctuations:
+
+  • Pre-Chinese New Year (Jan–Feb): Sea freight from Asia spikes 20–40% as
+    manufacturers rush to ship before factory closures.
+
+  • Q3 Peak Season (Jul–Sep): Retailers stock up for Black Friday, Cyber Monday,
+    and the holiday season. Trans-Pacific rates peak during this window.
+
+  • Golden Week (Oct): Chinese national holiday causes a brief dip followed by a
+    surge as factories reopen and clear backlogs.
+
+  • Year-End (Nov–Dec): Air freight demand surges for e-commerce and last-minute
+    holiday deliveries. Air rates can double on popular lanes.
+
+  • Off-Peak (Mar–May): Generally the most favorable period for rate negotiation.
+    Carriers offer promotional rates to fill capacity.
+
+Shippers are advised to book 4–6 weeks in advance during peak periods and to consider
+flexible sailing dates to access lower rates.
+
+5. NEGOTIATION TIPS
+---------------------
+Effective freight rate negotiation can yield savings of 10–30%. Key strategies:
+
+  a) Consolidate Volume: Aggregate shipments across business units or time periods
+     to present larger volumes to carriers. Volume commitments unlock tier discounts.
+
+  b) Multi-Carrier Strategy: Avoid over-reliance on a single carrier. Maintain
+     relationships with 2–3 carriers per trade lane to foster competition.
+
+  c) Long-Term Contracts: Annual or multi-year contracts lock in rates and protect
+     against peak-season surcharges. Ideal for shippers with predictable volumes.
+
+  d) Flexible Routing: Consider alternative ports or transshipment hubs. A slight
+     detour can unlock significantly cheaper rates (e.g., Tanjung Pelepas instead
+     of Singapore for Southeast Asia exports).
+
+  e) Off-Peak Shipping: Shift non-urgent shipments to off-peak windows (Mar–May)
+     for the best rates.
+
+  f) Leverage Data: Use the platform's rate analytics dashboard to benchmark
+     current rates against historical trends and market averages. Data-driven
+     negotiations are more effective.
+
+  g) Negotiate Surcharges Separately: Base rates often get the most attention,
+     but surcharges (BAF, THC, PSS) can add 20–40% to the total cost. Negotiate
+     caps or fixed surcharges where possible.
+
+  h) Consider Mode-Switching: For moderately time-sensitive cargo, rail freight
+     (China–Europe in 15–18 days) offers a compelling middle ground between sea
+     (35–40 days) and air (2–4 days) at roughly 40–60% of air freight cost.
+
+6. RATE VALIDITY & UPDATES
+----------------------------
+All rates displayed on the Logistics AI Tracker platform are updated weekly. Rate
+validity is typically 7–14 days from the quote date. Shippers should confirm the
+rate at the time of booking, as market conditions can change rapidly.
+
+For custom quotes, bulk pricing, or contract rate negotiations, contact the
+commercial team at rates@logistics-ai-tracker.com or use the in-app chat assistant
+with the query "get a freight quote from [origin] to [destination]".

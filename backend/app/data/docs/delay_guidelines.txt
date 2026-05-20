@@ -1,0 +1,114 @@
+LOGISTICS AI TRACKER — DELAY CLASSIFICATIONS & RESOLUTION GUIDELINES
+=====================================================================
+
+1. OVERVIEW
+-----------
+Delays are an inherent risk in global logistics. The Logistics AI Tracker platform
+classifies, tracks, and resolves delays using a structured framework designed to
+minimise impact on supply chains and keep all stakeholders informed in real time.
+This document defines the delay taxonomy, root-cause categories, escalation paths,
+and Service Level Agreement (SLA) commitments that govern how delays are managed.
+
+2. DELAY CLASSIFICATION TIERS
+-------------------------------
+Every delay is assigned one of four severity tiers based on the expected duration
+of the disruption relative to the original Estimated Time of Arrival (ETA):
+
+  • Tier 1 — Minor Delay (1–24 hours):
+    Causes: minor port congestion, short weather holds, documentation corrections.
+    Impact: Negligible. Consignee is notified via automated alert. No SLA penalty.
+
+  • Tier 2 — Moderate Delay (24–72 hours):
+    Causes: equipment shortage, customs inspection, carrier schedule adjustment,
+    moderate weather events (e.g., tropical storms en route).
+    Impact: May affect downstream scheduling. Account manager is notified. Consignee
+    receives updated ETA within 4 hours of delay classification.
+
+  • Tier 3 — Significant Delay (72 hours – 7 days):
+    Causes: port strikes, severe weather (typhoons, cyclones), vessel mechanical
+    failure, regulatory holds, geopolitical disruptions (sanctions, embargoes).
+    Impact: High. Alternative routing assessment is triggered automatically. Dedicated
+    incident manager assigned. Consignee and shipper receive daily status reports.
+
+  • Tier 4 — Critical Delay (>7 days):
+    Causes: force majeure events (earthquakes, pandemics, wars), total port closure,
+    vessel grounding or loss, prolonged customs seizure.
+    Impact: Severe. Executive escalation within 2 hours. Insurance claim pre-filing
+    initiated. Cargo rerouting or mode-switching evaluated immediately.
+
+3. COMMON DELAY ROOT CAUSES
+-----------------------------
+The platform tracks the following root-cause categories for analytics and reporting:
+
+  a) Weather & Natural Events — storms, fog, high winds, earthquakes, volcanic ash.
+  b) Port & Terminal Congestion — berth unavailability, crane breakdowns, labour
+     shortages, vessel bunching.
+  c) Customs & Regulatory — document discrepancies, random inspections, missing
+     certificates, trade compliance flags, sanctions screening holds.
+  d) Carrier / Equipment — vessel mechanical failure, aircraft technical issues, truck
+     breakdown, container damage, chassis shortage.
+  e) Geopolitical — canal closures (e.g., Suez, Panama), sanctions, trade wars,
+     regional conflicts affecting shipping lanes.
+  f) Operational — booking errors, mislabelling, incorrect weight declarations,
+     cargo misrouting by the carrier.
+  g) Demand Surge — peak-season capacity constraints (e.g., pre-Chinese New Year,
+     Black Friday, year-end), blank sailings by carriers.
+
+4. RESOLUTION PROCEDURES
+--------------------------
+Upon classification of a delay, the following resolution workflow is initiated:
+
+  Step 1 — Detection & Classification:
+    The platform's tracking engine detects deviation from the planned schedule. The
+    delay is auto-classified using historical data and carrier status feeds.
+
+  Step 2 — Notification:
+    Automated notifications are sent to all stakeholders (shipper, consignee, broker,
+    customs agent) via email, SMS, and in-app push notifications.
+
+  Step 3 — Root-Cause Analysis:
+    The operations team (or AI engine for Tier 1–2 delays) identifies the root cause
+    and logs it in the shipment record.
+
+  Step 4 — Mitigation Planning:
+    For Tier 2+ delays, a mitigation plan is created. Options include:
+      • Waiting for the original service to resume.
+      • Rerouting via an alternative port or corridor.
+      • Mode-switching (e.g., sea-to-air for urgent cargo).
+      • Splitting the shipment across multiple services.
+
+  Step 5 — Execution & Monitoring:
+    The chosen mitigation plan is executed. The platform monitors progress and updates
+    the ETA dynamically.
+
+  Step 6 — Post-Incident Review:
+    After resolution, a post-incident report is generated and shared with the shipper.
+    Lessons learned are fed into the platform's predictive delay model.
+
+5. SLA COMMITMENTS
+-------------------
+The Logistics AI Tracker platform commits to the following SLA targets:
+
+  • Delay Detection:      Within 1 hour of occurrence.
+  • Stakeholder Notification: Within 2 hours of classification.
+  • Updated ETA:          Within 4 hours of classification for Tier 2+.
+  • Mitigation Plan:      Within 8 hours for Tier 3; within 4 hours for Tier 4.
+  • Post-Incident Report: Within 48 hours of delay resolution.
+
+SLA performance is measured monthly and published in the platform's analytics dashboard.
+Carriers with chronic SLA violations (>3 Tier 3+ delays in a rolling 90-day window) are
+flagged for review and may be deprioritised in rate recommendations.
+
+6. COMPENSATION & CREDITS
+---------------------------
+  • Tier 1: No compensation.
+  • Tier 2: Platform service fee waiver for the affected shipment upon request.
+  • Tier 3: 15% discount on the next shipment booking + priority rebooking.
+  • Tier 4: Full service fee refund + insurance claim facilitation + dedicated account
+    recovery support.
+
+Compensation claims must be submitted within 14 days of delivery (or last status update
+for lost shipments). All claims are reviewed within 5 business days.
+
+For delay-related enquiries, contact delays@logistics-ai-tracker.com or use the in-app
+chat assistant with the query "delay status for [tracking number]".
