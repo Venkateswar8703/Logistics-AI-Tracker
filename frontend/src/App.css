@@ -7,29 +7,23 @@
 .main-content {
   flex: 1;
   min-width: 0;
-  padding: 2rem;
-  margin-left: 240px;
-  max-width: 1200px;
+  padding: 2rem 2.5rem;
+  margin-left: 250px;
 }
 
 .page-wrapper {
-  animation: pageIn 0.2s ease;
+  animation: fadeIn 0.25s ease;
 }
 
-@keyframes pageIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 @media (max-width: 1024px) {
-  .main-content {
-    margin-left: 0;
-    padding: 1.5rem;
-  }
+  .main-content { margin-left: 0; padding: 1.5rem; }
 }
 
 @media (max-width: 640px) {
-  .main-content {
-    padding: 1rem;
-  }
+  .main-content { padding: 1rem; }
 }

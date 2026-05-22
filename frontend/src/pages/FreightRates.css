@@ -1,8 +1,4 @@
-.freight-page {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
+.freight-page { display: flex; flex-direction: column; gap: 1.5rem; }
 
 .freight-header {
   display: flex;
@@ -12,11 +8,7 @@
   gap: 1rem;
 }
 
-.freight-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
+.freight-title { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); letter-spacing: -0.02em; }
 
 .rate-cards-grid {
   display: grid;
@@ -24,8 +16,4 @@
   gap: 1rem;
 }
 
-@media (max-width: 640px) {
-  .rate-cards-grid {
-    grid-template-columns: 1fr;
-  }
-}
+@media (max-width: 640px) { .rate-cards-grid { grid-template-columns: 1fr; } }

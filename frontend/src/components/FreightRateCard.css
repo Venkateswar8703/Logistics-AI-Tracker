@@ -3,19 +3,13 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: 1.25rem;
-  transition: border-color var(--transition);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
 }
 
-.rate-card:hover {
-  border-color: var(--border-hover);
-}
+.rate-card:hover { box-shadow: var(--shadow-md); }
 
-.rate-card-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
+.rate-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
 
 .rate-mode {
   display: flex;
@@ -33,30 +27,21 @@
 .rate-mode.rail { color: var(--status-purple); }
 
 .rate-mode-icon {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: var(--radius);
 }
 
-.rate-mode.air .rate-mode-icon { background: rgba(59, 130, 246, 0.1); }
-.rate-mode.sea .rate-mode-icon { background: rgba(6, 182, 212, 0.1); }
-.rate-mode.road .rate-mode-icon { background: rgba(245, 158, 11, 0.1); }
-.rate-mode.rail .rate-mode-icon { background: rgba(168, 85, 247, 0.1); }
+.rate-mode.air .rate-mode-icon { background: #eff6ff; }
+.rate-mode.sea .rate-mode-icon { background: #ecfeff; }
+.rate-mode.road .rate-mode-icon { background: #fffbeb; }
+.rate-mode.rail .rate-mode-icon { background: #f5f3ff; }
 
-.rate-route {
-  font-size: 0.9375rem;
-  font-weight: 500;
-  color: var(--text-primary);
-  margin-bottom: 0.75rem;
-}
-
-.rate-route-arrow {
-  color: var(--text-muted);
-  margin: 0 0.25rem;
-}
+.rate-route { font-size: 0.9375rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
+.rate-route-arrow { color: var(--text-muted); margin: 0 0.25rem; }
 
 .rate-details {
   display: flex;
@@ -66,29 +51,8 @@
   border-top: 1px solid var(--border);
 }
 
-.rate-carrier {
-  font-size: 0.8125rem;
-  color: var(--text-muted);
-}
-
-.rate-transit {
-  font-size: 0.75rem;
-  color: var(--text-muted);
-  margin-top: 0.125rem;
-}
-
-.rate-price {
-  text-align: right;
-}
-
-.rate-amount {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.rate-unit {
-  font-size: 0.6875rem;
-  color: var(--text-muted);
-  font-weight: 400;
-}
+.rate-carrier { font-size: 0.8125rem; color: var(--text-secondary); }
+.rate-transit { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.125rem; }
+.rate-price { text-align: right; }
+.rate-amount { font-size: 1.125rem; font-weight: 700; color: var(--text-primary); }
+.rate-unit { font-size: 0.6875rem; color: var(--text-muted); font-weight: 400; }
