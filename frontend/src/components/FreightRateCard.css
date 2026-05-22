@@ -1,6 +1,7 @@
-.rate-card {
+.freight-card {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: var(--radius-lg);
   padding: 1.25rem;
@@ -8,10 +9,20 @@
   transition: all 0.25s ease;
   position: relative;
   overflow: hidden;
+  animation: fadeInUp 0.35s ease backwards;
+
+  /* Align card heights and contents */
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.rate-card::before {
-  content: '';
+.freight-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.freight-card-top-border {
   position: absolute;
   top: 0;
   left: 0;
@@ -19,28 +30,21 @@
   height: 3px;
 }
 
-.rate-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+.freight-card--blue .freight-card-top-border { background: linear-gradient(90deg, #2563eb, #3b82f6); }
+.freight-card--cyan .freight-card-top-border { background: linear-gradient(90deg, #0891b2, #06b6d4); }
+.freight-card--green .freight-card-top-border { background: linear-gradient(90deg, #16a34a, #22c55e); }
+.freight-card--purple .freight-card-top-border { background: linear-gradient(90deg, #7c3aed, #a855f7); }
 
-.rate-card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1rem; }
-
-.rate-mode {
+.freight-card-header {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 0.6875rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  gap: 0.625rem;
+  margin-bottom: 1rem;
 }
 
-.rate-mode.air { color: var(--status-blue); }
-.rate-mode.sea { color: var(--status-cyan); }
-.rate-mode.road { color: var(--status-amber); }
-.rate-mode.rail { color: var(--status-purple); }
-
-.rate-mode-icon {
-  width: 32px;
-  height: 32px;
+.freight-card-mode {
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,24 +52,118 @@
   color: #fff;
 }
 
-.rate-mode.air .rate-mode-icon { background: linear-gradient(135deg, #2563eb, #3b82f6); }
-.rate-mode.sea .rate-mode-icon { background: linear-gradient(135deg, #0891b2, #06b6d4); }
-.rate-mode.road .rate-mode-icon { background: linear-gradient(135deg, #d97706, #f59e0b); }
-.rate-mode.rail .rate-mode-icon { background: linear-gradient(135deg, #7c3aed, #a855f7); }
+.freight-card-mode--blue { background: linear-gradient(135deg, #2563eb, #3b82f6); box-shadow: 0 3px 10px rgba(37, 99, 235, 0.2); }
+.freight-card-mode--cyan { background: linear-gradient(135deg, #0891b2, #06b6d4); box-shadow: 0 3px 10px rgba(8, 145, 178, 0.2); }
+.freight-card-mode--green { background: linear-gradient(135deg, #16a34a, #22c55e); box-shadow: 0 3px 10px rgba(22, 163, 74, 0.2); }
+.freight-card-mode--purple { background: linear-gradient(135deg, #7c3aed, #a855f7); box-shadow: 0 3px 10px rgba(124, 58, 237, 0.2); }
 
-.rate-route { font-size: 0.9375rem; font-weight: 600; color: var(--text-primary); margin-bottom: 0.75rem; }
-.rate-route-arrow { color: var(--text-muted); margin: 0 0.375rem; }
+.freight-card-mode-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
 
-.rate-details {
+/* ─── ROUTE ─── */
+.freight-card-route {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding-top: 0.75rem;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0.875rem;
+  background: rgba(241, 245, 249, 0.5);
+  border-radius: var(--radius);
+}
+
+.freight-card-route-point {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.freight-card-route-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.freight-card-route-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.freight-card-route-arrow {
+  font-size: 1.125rem;
+  color: var(--accent);
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+/* ─── DETAILS ─── */
+.freight-card-details {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  margin-top: auto; /* Push details and price to the bottom if route height varies */
+}
+
+.freight-card-detail {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.freight-card-detail-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.freight-card-detail-value {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ─── PRICE ─── */
+.freight-card-price {
+  display: flex;
+  align-items: baseline;
+  gap: 0.375rem;
+  padding-top: 0.875rem;
   border-top: 1px solid rgba(148, 163, 184, 0.15);
 }
 
-.rate-carrier { font-size: 0.8125rem; color: var(--text-secondary); font-weight: 500; }
-.rate-transit { font-size: 0.75rem; color: var(--text-muted); margin-top: 0.125rem; }
-.rate-price { text-align: right; }
-.rate-amount { font-size: 1.25rem; font-weight: 700; color: var(--text-primary); }
-.rate-unit { font-size: 0.6875rem; color: var(--text-muted); font-weight: 400; }
+.freight-card-price-label {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+.freight-card-price-value {
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+.freight-card-price-unit {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
