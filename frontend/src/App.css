@@ -1,29 +1,15 @@
-.app-layout {
-  display: flex;
-  min-height: 100vh;
-  background: var(--bg-primary);
-}
+.app-layout { display: flex; min-height: 100vh; }
 
 .main-content {
   flex: 1;
   min-width: 0;
   padding: 2rem 2.5rem;
-  margin-left: 250px;
+  margin-left: 260px;
 }
 
 .page-wrapper {
-  animation: fadeIn 0.25s ease;
+  animation: fadeInUp 0.35s ease;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(4px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 1024px) {
-  .main-content { margin-left: 0; padding: 1.5rem; }
-}
-
-@media (max-width: 640px) {
-  .main-content { padding: 1rem; }
-}
+@media (max-width: 1024px) { .main-content { margin-left: 0; padding: 1.5rem; } }
+@media (max-width: 640px) { .main-content { padding: 1rem; } }

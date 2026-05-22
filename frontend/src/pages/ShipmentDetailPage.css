@@ -7,8 +7,8 @@
   font-size: 0.8125rem;
   font-weight: 500;
   color: var(--text-muted);
-  transition: color var(--transition);
+  transition: all var(--transition);
   width: fit-content;
 }
 
-.back-button:hover { color: var(--accent); }
+.back-button:hover { color: var(--accent); transform: translateX(-3px); }

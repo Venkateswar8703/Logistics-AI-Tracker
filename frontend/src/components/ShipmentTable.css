@@ -1,37 +1,45 @@
 .table-container {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
   overflow: hidden;
 }
 
-.shipment-table {
-  width: 100%;
-  border-collapse: collapse;
-}
+.shipment-table { width: 100%; border-collapse: collapse; }
 
 .shipment-table thead th {
   font-size: 0.6875rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
   color: var(--text-muted);
   padding: 0.875rem 1rem;
   text-align: left;
   border-bottom: 1px solid var(--border);
-  background: var(--bg-primary);
+  background: rgba(241, 245, 249, 0.5);
 }
 
 .shipment-table tbody tr {
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.1);
   cursor: pointer;
-  transition: background var(--transition);
+  transition: all 0.2s ease;
+  animation: fadeIn 0.3s ease backwards;
 }
+
+.shipment-table tbody tr:nth-child(1) { animation-delay: 0ms; }
+.shipment-table tbody tr:nth-child(2) { animation-delay: 40ms; }
+.shipment-table tbody tr:nth-child(3) { animation-delay: 80ms; }
+.shipment-table tbody tr:nth-child(4) { animation-delay: 120ms; }
+.shipment-table tbody tr:nth-child(5) { animation-delay: 160ms; }
 
 .shipment-table tbody tr:last-child { border-bottom: none; }
 
-.shipment-table tbody tr:hover { background: var(--bg-hover); }
+.shipment-table tbody tr:hover {
+  background: rgba(37, 99, 235, 0.03);
+  transform: scale(1.002);
+}
 
 .shipment-table td {
   padding: 0.875rem 1rem;
@@ -46,10 +54,7 @@
   font-family: 'Inter', monospace;
 }
 
-.carrier-text {
-  color: var(--text-muted);
-  font-size: 0.8125rem;
-}
+.carrier-text { color: var(--text-muted); font-size: 0.8125rem; }
 
 .empty-state {
   text-align: center;
