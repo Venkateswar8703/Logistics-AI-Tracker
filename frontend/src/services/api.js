@@ -1,7 +1,11 @@
 import axios from 'axios';
 
+// In production, VITE_API_URL points to the Render backend (e.g. https://logistics-ai-tracker-api.onrender.com/api)
+// In local dev, falls back to '/api' which is proxied by Vite to localhost:8000
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
+
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: API_BASE_URL,
   headers: {
     'Content-Type': 'application/json',
   },

@@ -244,6 +244,47 @@ Logistics-AI-Tracker/
 ### AI Chat Assistant
 *Natural language interface for logistics queries*
 
+## ☁️ Cloud Deployment (Render + Vercel)
+
+Deploy the app for free using **Render** (backend) and **Vercel** (frontend).
+
+### Step 1: Deploy Backend to Render
+
+1. Go to [render.com](https://render.com) and sign up / log in
+2. Click **"New +"** → **"Web Service"**
+3. Connect your GitHub account and select the **Logistics-AI-Tracker** repo
+4. Configure the service:
+   - **Name:** `logistics-ai-tracker-api`
+   - **Root Directory:** `backend`
+   - **Runtime:** `Python 3`
+   - **Build Command:** `chmod +x build.sh && ./build.sh`
+   - **Start Command:** `uvicorn app.main:app --host 0.0.0.0 --port $PORT`
+   - **Plan:** Free
+5. Add environment variable: `DEBUG` = `false`
+6. Click **"Create Web Service"**
+7. Wait for deployment (~5-10 min for first build)
+8. Copy your backend URL (e.g., `https://logistics-ai-tracker-api.onrender.com`)
+
+### Step 2: Deploy Frontend to Vercel
+
+1. Go to [vercel.com](https://vercel.com) and sign up / log in
+2. Click **"Add New..."** → **"Project"**
+3. Import the **Logistics-AI-Tracker** repo from GitHub
+4. Configure the project:
+   - **Root Directory:** `frontend`
+   - **Framework Preset:** `Vite`
+   - **Build Command:** `npm run build`
+   - **Output Directory:** `dist`
+5. Add environment variable:
+   - `VITE_API_URL` = `https://logistics-ai-tracker-api.onrender.com/api`
+   *(Replace with your actual Render backend URL from Step 1)*
+6. Click **"Deploy"**
+7. Your frontend will be live at `https://logistics-ai-tracker.vercel.app` 🎉
+
+### One-Click Render Deploy (Alternative)
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Venkateswar8703/Logistics-AI-Tracker)
+
 ---
 
 ## 🔮 Future Enhancements
