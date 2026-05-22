@@ -1,102 +1,62 @@
-/* ===== Shipment Table Container ===== */
-.shipment-table-container {
+.table-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
   overflow: hidden;
 }
 
-.shipment-table-scroll {
-  overflow-x: auto;
-}
-
-.shipment-table-empty {
-  padding: 48px;
-  text-align: center;
-  color: var(--text-secondary);
-  font-size: 14px;
-}
-
-/* ===== Table ===== */
 .shipment-table {
   width: 100%;
   border-collapse: collapse;
-  min-width: 700px;
 }
 
-.shipment-table thead tr {
-  border-bottom: 1px solid var(--border-glass);
-}
-
-.shipment-table th {
-  padding: 14px 20px;
-  text-align: left;
-  font-size: 12px;
+.shipment-table thead th {
+  font-size: 0.6875rem;
   font-weight: 600;
-  color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  white-space: nowrap;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-secondary);
 }
 
-.shipment-table td {
-  padding: 16px 20px;
-  font-size: 14px;
-  vertical-align: middle;
-}
-
-/* ===== Row ===== */
-.shipment-table-row {
+.shipment-table tbody tr {
+  border-bottom: 1px solid var(--border);
   cursor: pointer;
-  transition: all var(--transition-fast);
-  animation: fadeIn 0.4s ease forwards;
-  opacity: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  transition: background var(--transition);
 }
 
-.shipment-table-row:hover {
-  background: rgba(255, 255, 255, 0.04);
-}
-
-.shipment-table-row:last-child {
+.shipment-table tbody tr:last-child {
   border-bottom: none;
 }
 
-/* ===== Cell Styles ===== */
-.tracking-number {
-  font-weight: 600;
-  color: var(--accent-blue);
-  font-family: 'Inter', monospace;
-  font-size: 13px;
-  letter-spacing: 0.02em;
+.shipment-table tbody tr:hover {
+  background: var(--bg-elevated);
 }
 
-.location-text {
-  color: var(--text-primary);
+.shipment-table td {
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.tracking-number {
+  color: var(--accent);
   font-weight: 500;
+  font-family: 'Inter', monospace;
 }
 
 .carrier-text {
-  color: var(--text-secondary);
-  font-weight: 500;
-}
-
-.eta-text {
-  color: var(--text-secondary);
-  font-size: 13px;
-}
-
-.row-arrow {
   color: var(--text-muted);
-  transition: all var(--transition-fast);
+  font-size: 0.8125rem;
 }
 
-.shipment-table-row:hover .row-arrow {
-  color: var(--accent-blue);
-  transform: translateX(3px);
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 640px) {
-  .shipment-table th,
-  .shipment-table td {
-    padding: 12px 14px;
-  }
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: var(--text-muted);
+  font-size: 0.875rem;
 }

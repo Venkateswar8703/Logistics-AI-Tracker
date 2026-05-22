@@ -6,9 +6,6 @@ import {
   DollarSign,
   MessageSquare,
   Settings,
-  ChevronLeft,
-  ChevronRight,
-  Truck,
   Menu,
   X,
 } from 'lucide-react';
@@ -18,44 +15,32 @@ const navItems = [
   { path: '/', label: 'Dashboard', icon: LayoutDashboard },
   { path: '/shipments', label: 'Shipments', icon: Package },
   { path: '/freight', label: 'Freight Rates', icon: DollarSign },
-  { path: '/chat', label: 'AI Chat', icon: MessageSquare },
+  { path: '/chat', label: 'AI Assistant', icon: MessageSquare },
 ];
 
 function Sidebar() {
-  const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const location = useLocation();
 
-  const toggleCollapse = () => setCollapsed(!collapsed);
-  const toggleMobile = () => setMobileOpen(!mobileOpen);
-
   return (
     <>
-      {/* Mobile toggle */}
-      <button className="sidebar-mobile-toggle" onClick={toggleMobile}>
-        {mobileOpen ? <X size={20} /> : <Menu size={20} />}
+      <button className="sidebar-toggle" onClick={() => setMobileOpen(!mobileOpen)}>
+        {mobileOpen ? <X size={18} /> : <Menu size={18} />}
       </button>
 
-      {/* Overlay */}
-      {mobileOpen && (
-        <div className="sidebar-overlay" onClick={() => setMobileOpen(false)} />
-      )}
+      <div
+        className={`sidebar-overlay ${mobileOpen ? 'visible' : ''}`}
+        onClick={() => setMobileOpen(false)}
+      />
 
-      <aside className={`sidebar ${collapsed ? 'sidebar--collapsed' : ''} ${mobileOpen ? 'sidebar--mobile-open' : ''}`}>
-        {/* Brand */}
+      <aside className={`sidebar ${mobileOpen ? 'open' : ''}`}>
         <div className="sidebar-brand">
           <div className="sidebar-brand-icon">
-            <Truck size={24} />
+            <Package size={18} />
           </div>
-          {!collapsed && (
-            <div className="sidebar-brand-text">
-              <span className="sidebar-brand-name">LogisticsAI</span>
-              <span className="sidebar-brand-sub">Tracker</span>
-            </div>
-          )}
+          <span className="sidebar-brand-text">LogisticsAI</span>
         </div>
 
-        {/* Navigation */}
         <nav className="sidebar-nav">
           {navItems.map((item) => {
             const Icon = item.icon;
@@ -66,39 +51,21 @@ function Sidebar() {
               <NavLink
                 key={item.path}
                 to={item.path}
-                className={`sidebar-nav-item ${isActive ? 'sidebar-nav-item--active' : ''}`}
+                className={`sidebar-nav-item ${isActive ? 'active' : ''}`}
                 onClick={() => setMobileOpen(false)}
-                title={collapsed ? item.label : undefined}
               >
-                <div className="sidebar-nav-icon">
-                  <Icon size={20} />
-                </div>
-                {!collapsed && <span className="sidebar-nav-label">{item.label}</span>}
-                {isActive && <div className="sidebar-nav-indicator" />}
+                <Icon className="sidebar-nav-icon" size={18} />
+                <span>{item.label}</span>
               </NavLink>
             );
           })}
         </nav>
 
-        {/* Bottom */}
-        <div className="sidebar-bottom">
-          <button
-            className="sidebar-nav-item sidebar-settings-btn"
-            title={collapsed ? 'Settings' : undefined}
-          >
-            <div className="sidebar-nav-icon">
-              <Settings size={20} />
-            </div>
-            {!collapsed && <span className="sidebar-nav-label">Settings</span>}
-          </button>
-
-          <button
-            className="sidebar-collapse-btn"
-            onClick={toggleCollapse}
-            title={collapsed ? 'Expand' : 'Collapse'}
-          >
-            {collapsed ? <ChevronRight size={16} /> : <ChevronLeft size={16} />}
-          </button>
+        <div className="sidebar-footer">
+          <div className="sidebar-footer-item">
+            <Settings size={16} />
+            <span>Settings</span>
+          </div>
         </div>
       </aside>
     </>

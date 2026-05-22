@@ -1,184 +1,94 @@
-/* ===== Freight Rate Card ===== */
-.freight-card {
-  background: var(--bg-glass);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--border-glass);
+.rate-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  padding: 24px;
-  transition: all var(--transition-base);
-  position: relative;
-  overflow: hidden;
-  animation: fadeInUp 0.5s ease forwards;
-  opacity: 0;
+  padding: 1.25rem;
+  transition: border-color var(--transition);
 }
 
-.freight-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: rgba(255, 255, 255, 0.15);
+.rate-card:hover {
+  border-color: var(--border-hover);
 }
 
-/* ===== Top Border Gradient ===== */
-.freight-card-top-border {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
-}
-
-.freight-card--blue .freight-card-top-border {
-  background: var(--gradient-primary);
-}
-
-.freight-card--cyan .freight-card-top-border {
-  background: linear-gradient(90deg, #06b6d4, #3b82f6);
-}
-
-.freight-card--green .freight-card-top-border {
-  background: var(--gradient-green);
-}
-
-.freight-card--purple .freight-card-top-border {
-  background: var(--gradient-accent);
-}
-
-/* ===== Header ===== */
-.freight-card-header {
+.rate-card-header {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
-.freight-card-mode {
-  width: 42px;
-  height: 42px;
+.rate-mode {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.rate-mode.air { color: var(--status-blue); }
+.rate-mode.sea { color: var(--status-cyan); }
+.rate-mode.road { color: var(--status-amber); }
+.rate-mode.rail { color: var(--status-purple); }
+
+.rate-mode-icon {
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--radius-md);
-  color: white;
+  border-radius: var(--radius);
 }
 
-.freight-card-mode--blue {
-  background: linear-gradient(135deg, #3b82f6, #2563eb);
-  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
-}
+.rate-mode.air .rate-mode-icon { background: rgba(59, 130, 246, 0.1); }
+.rate-mode.sea .rate-mode-icon { background: rgba(6, 182, 212, 0.1); }
+.rate-mode.road .rate-mode-icon { background: rgba(245, 158, 11, 0.1); }
+.rate-mode.rail .rate-mode-icon { background: rgba(168, 85, 247, 0.1); }
 
-.freight-card-mode--cyan {
-  background: linear-gradient(135deg, #06b6d4, #0891b2);
-  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
-}
-
-.freight-card-mode--green {
-  background: linear-gradient(135deg, #10b981, #059669);
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
-}
-
-.freight-card-mode--purple {
-  background: linear-gradient(135deg, #8b5cf6, #7c3aed);
-  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
-}
-
-.freight-card-mode-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-/* ===== Route ===== */
-.freight-card-route {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: var(--radius-md);
-}
-
-.freight-card-route-point {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.freight-card-route-label {
-  font-size: 11px;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-}
-
-.freight-card-route-value {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text-primary);
-}
-
-.freight-card-route-arrow {
-  color: var(--text-muted);
-  font-size: 16px;
-}
-
-/* ===== Details ===== */
-.freight-card-details {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 20px;
-}
-
-.freight-card-detail {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.freight-card-detail-label {
-  font-size: 11px;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.06em;
-}
-
-.freight-card-detail-value {
-  font-size: 14px;
-  color: var(--text-primary);
+.rate-route {
+  font-size: 0.9375rem;
   font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
 }
 
-/* ===== Price ===== */
-.freight-card-price {
+.rate-route-arrow {
+  color: var(--text-muted);
+  margin: 0 0.25rem;
+}
+
+.rate-details {
   display: flex;
-  align-items: baseline;
-  gap: 8px;
-  padding-top: 16px;
-  border-top: 1px solid var(--border-glass);
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
 }
 
-.freight-card-price-label {
-  font-size: 11px;
+.rate-carrier {
+  font-size: 0.8125rem;
   color: var(--text-muted);
-  text-transform: uppercase;
-  font-weight: 600;
-  letter-spacing: 0.06em;
 }
 
-.freight-card-price-value {
-  font-size: 24px;
-  font-weight: 800;
-  color: var(--accent-green);
-  letter-spacing: -0.02em;
-}
-
-.freight-card-price-unit {
-  font-size: 12px;
+.rate-transit {
+  font-size: 0.75rem;
   color: var(--text-muted);
+  margin-top: 0.125rem;
+}
+
+.rate-price {
+  text-align: right;
+}
+
+.rate-amount {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.rate-unit {
+  font-size: 0.6875rem;
+  color: var(--text-muted);
+  font-weight: 400;
 }

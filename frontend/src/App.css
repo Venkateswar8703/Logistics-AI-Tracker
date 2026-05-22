@@ -1,67 +1,35 @@
-/* ===== App Layout ===== */
 .app-layout {
   display: flex;
   min-height: 100vh;
-  width: 100%;
+  background: var(--bg-primary);
 }
 
 .main-content {
   flex: 1;
-  margin-left: 260px;
-  min-height: 100vh;
-  padding: 32px 40px;
-  overflow-y: auto;
-  position: relative;
+  min-width: 0;
+  padding: 2rem;
+  margin-left: 240px;
+  max-width: 1200px;
 }
 
-/* ===== Page Transitions ===== */
 .page-wrapper {
-  width: 100%;
-  min-height: 100%;
+  animation: pageIn 0.2s ease;
 }
 
-.page-enter-active {
-  animation: pageEnter 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+@keyframes pageIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
-.page-exit {
-  animation: pageExit 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-@keyframes pageEnter {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes pageExit {
-  from {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-}
-
-/* ===== Responsive ===== */
 @media (max-width: 1024px) {
   .main-content {
-    margin-left: 72px;
-    padding: 24px 20px;
+    margin-left: 0;
+    padding: 1.5rem;
   }
 }
 
 @media (max-width: 640px) {
   .main-content {
-    margin-left: 0;
-    padding: 16px;
-    padding-bottom: 80px;
+    padding: 1rem;
   }
 }

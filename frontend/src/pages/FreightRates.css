@@ -1,123 +1,31 @@
-/* ===== Freight Rates Page ===== */
 .freight-page {
-  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .freight-header {
-  margin-bottom: 24px;
-  animation: fadeIn 0.5s ease;
-}
-
-.freight-subtitle {
-  font-size: 15px;
-  color: var(--text-secondary);
-  margin-top: 4px;
-}
-
-/* ===== Search ===== */
-.freight-search {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 4px 18px;
-  border-radius: var(--radius-xl);
-  margin-bottom: 20px;
-  transition: all var(--transition-base);
-}
-
-.freight-search:focus-within {
-  border-color: rgba(59, 130, 246, 0.4);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
-}
-
-.freight-search-icon {
-  color: var(--text-muted);
-  flex-shrink: 0;
-}
-
-.freight-search:focus-within .freight-search-icon {
-  color: var(--accent-blue);
-}
-
-.freight-search-input {
-  flex: 1;
-  padding: 14px 0;
-  font-size: 14px;
-  color: var(--text-primary);
-}
-
-.freight-search-input::placeholder {
-  color: var(--text-muted);
-}
-
-/* ===== Mode Tabs ===== */
-.freight-mode-tabs {
-  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 20px;
+  gap: 1rem;
 }
 
-.mode-tab {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 10px 18px;
-  border-radius: 100px;
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--text-secondary);
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid var(--border-glass);
-  transition: all var(--transition-fast);
-  cursor: pointer;
-}
-
-.mode-tab:hover {
+.freight-title {
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.15);
 }
 
-.mode-tab--active {
-  color: var(--text-primary);
-  background: rgba(59, 130, 246, 0.12);
-  border-color: rgba(59, 130, 246, 0.3);
-}
-
-/* ===== Results Info ===== */
-.freight-results-info {
-  font-size: 13px;
-  color: var(--text-muted);
-  margin-bottom: 20px;
-}
-
-/* ===== Cards Grid ===== */
-.freight-cards-grid {
+.rate-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-  gap: 20px;
-}
-
-/* ===== Empty ===== */
-.freight-empty {
-  padding: 48px;
-  text-align: center;
-  color: var(--text-secondary);
-  font-size: 14px;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
-  .freight-cards-grid {
-    grid-template-columns: 1fr;
-  }
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
 }
 
 @media (max-width: 640px) {
-  .freight-mode-tabs {
-    overflow-x: auto;
-    flex-wrap: nowrap;
-    padding-bottom: 4px;
+  .rate-cards-grid {
+    grid-template-columns: 1fr;
   }
 }

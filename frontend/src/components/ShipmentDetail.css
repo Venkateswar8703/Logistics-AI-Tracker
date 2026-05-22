@@ -1,236 +1,135 @@
-/* ===== Shipment Detail ===== */
 .shipment-detail {
-  max-width: 900px;
+  max-width: 800px;
 }
 
-/* ===== Header ===== */
-.shipment-detail-header {
+.detail-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 28px 32px;
-  margin-bottom: 24px;
-  animation: fadeInUp 0.5s ease;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
-.shipment-detail-tracking {
-  font-size: 24px;
+.detail-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.detail-tracking {
+  font-size: 1.5rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 6px;
-  letter-spacing: -0.02em;
+  font-family: 'Inter', monospace;
 }
 
-.shipment-detail-route {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  color: var(--text-secondary);
-  font-weight: 500;
-}
-
-.route-arrow {
-  color: var(--accent-blue);
-}
-
-.shipment-detail-header-right {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 8px;
-}
-
-.shipment-detail-carrier {
-  font-size: 13px;
+.detail-carrier {
+  font-size: 0.875rem;
   color: var(--text-muted);
-  font-weight: 500;
 }
 
-/* ===== Info Grid ===== */
-.shipment-detail-grid {
+.detail-info-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 16px;
-  margin-bottom: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-bottom: 2rem;
 }
 
-.shipment-info-card {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-  padding: 20px;
-  animation: fadeInUp 0.5s ease forwards;
-  opacity: 0;
+.detail-info-item {
+  padding: 1rem 1.25rem;
+  background: var(--bg-card);
 }
 
-.shipment-info-icon {
-  width: 38px;
-  height: 38px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(59, 130, 246, 0.1);
-  border-radius: var(--radius-md);
-  color: var(--accent-blue);
-  flex-shrink: 0;
-}
-
-.shipment-info-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-
-.shipment-info-label {
-  font-size: 12px;
-  color: var(--text-muted);
+.detail-info-label {
+  font-size: 0.6875rem;
   font-weight: 500;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 0.375rem;
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
 }
 
-.shipment-info-value {
-  font-size: 15px;
+.detail-info-value {
+  font-size: 0.9375rem;
+  font-weight: 500;
   color: var(--text-primary);
+}
+
+.detail-section-title {
+  font-size: 0.875rem;
   font-weight: 600;
-}
-
-/* ===== Timeline Section ===== */
-.shipment-timeline-section {
-  animation: fadeInUp 0.5s ease;
-}
-
-.section-title {
-  font-size: 18px;
-  font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 20px;
-  letter-spacing: -0.01em;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
-/* ===== Timeline ===== */
-.shipment-timeline {
+.timeline {
   position: relative;
-  padding-left: 32px;
+  padding-left: 1.5rem;
 }
 
-.timeline-line {
+.timeline::before {
+  content: '';
   position: absolute;
-  left: 11px;
-  top: 4px;
-  bottom: 4px;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--accent-blue), var(--border-glass));
-  border-radius: 1px;
-  transform-origin: top;
-  transform: scaleY(0);
-  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  left: 3px;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  background: var(--border);
 }
 
-.shipment-timeline--animate .timeline-line {
-  transform: scaleY(1);
-}
-
-.timeline-event {
+.timeline-item {
   position: relative;
-  padding-bottom: 28px;
-  opacity: 0;
-  animation: fadeInLeft 0.4s ease forwards;
+  padding-bottom: 1.5rem;
+  padding-left: 1rem;
 }
 
-@keyframes fadeInLeft {
-  from { opacity: 0; transform: translateX(10px); }
-  to { opacity: 1; transform: translateX(0); }
-}
-
-.timeline-event:last-child {
+.timeline-item:last-child {
   padding-bottom: 0;
 }
 
-/* ===== Timeline Dot ===== */
 .timeline-dot {
   position: absolute;
-  left: -32px;
-  top: 2px;
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg-secondary);
-  border: 2px solid var(--border-glass);
+  left: -1.5rem;
+  top: 6px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
+  background: var(--border-hover);
+  border: 1.5px solid var(--bg-card);
+}
+
+.timeline-item:first-child .timeline-dot {
+  background: var(--accent);
+  width: 9px;
+  height: 9px;
+  left: calc(-1.5rem - 1px);
+}
+
+.timeline-timestamp {
+  font-size: 0.75rem;
   color: var(--text-muted);
-  z-index: 1;
+  margin-bottom: 0.125rem;
 }
 
-.timeline-dot--current {
-  background: var(--accent-blue);
-  border-color: var(--accent-blue);
-  color: white;
-  box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
-}
-
-/* ===== Timeline Content ===== */
-.timeline-content {
-  background: var(--bg-glass);
-  backdrop-filter: blur(12px);
-  border: 1px solid var(--border-glass);
-  border-radius: var(--radius-md);
-  padding: 16px 20px;
-}
-
-.timeline-event-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 4px;
-}
-
-.timeline-event-title {
-  font-size: 14px;
-  font-weight: 600;
+.timeline-location {
+  font-size: 0.875rem;
+  font-weight: 500;
   color: var(--text-primary);
 }
 
-.timeline-event-time {
-  font-size: 12px;
-  color: var(--text-muted);
-  white-space: nowrap;
-}
-
-.timeline-event-location {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 12px;
+.timeline-description {
+  font-size: 0.8125rem;
   color: var(--text-secondary);
-  margin-top: 4px;
-}
-
-.timeline-event-desc {
-  font-size: 13px;
-  color: var(--text-secondary);
-  margin-top: 6px;
-  line-height: 1.5;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 640px) {
-  .shipment-detail-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-    padding: 20px;
-  }
-
-  .shipment-detail-header-right {
-    align-items: flex-start;
-  }
-
-  .shipment-detail-grid {
-    grid-template-columns: 1fr;
-  }
+  margin-top: 0.125rem;
 }
