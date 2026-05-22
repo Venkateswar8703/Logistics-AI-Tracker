@@ -12,6 +12,61 @@ const defaultSuggestions = [
   'What is the average delivery time?',
 ];
 
+const parseCodeOnly = (str, role) => {
+  const parts = str.split('`');
+  if (parts.length === 1) return str;
+  return parts.map((part, index) => {
+    if (index % 2 === 1) {
+      return <code key={index} className="inline-code">{part}</code>;
+    }
+    return part;
+  });
+};
+
+const parseBoldAndCode = (str, role) => {
+  const parts = str.split('**');
+  return parts.map((part, index) => {
+    if (index % 2 === 1) {
+      return <strong key={index}>{parseCodeOnly(part, role)}</strong>;
+    }
+    return parseCodeOnly(part, role);
+  });
+};
+
+const renderMessageContent = (text, role) => {
+  if (!text) return null;
+  const lines = text.split('\n');
+  const elements = [];
+  let currentList = [];
+
+  lines.forEach((line, lineIndex) => {
+    const bulletMatch = line.match(/^[\s]*[•\-\*][\s]+(.*)/);
+    if (bulletMatch) {
+      const content = bulletMatch[1];
+      currentList.push(<li key={`li-${lineIndex}`}>{parseBoldAndCode(content, role)}</li>);
+    } else {
+      if (currentList.length > 0) {
+        elements.push(<ul key={`ul-${lineIndex}`} className="chat-ul">{currentList}</ul>);
+        currentList = [];
+      }
+      if (line.trim() === '') {
+        elements.push(<div key={`br-${lineIndex}`} className="chat-space" />);
+      } else {
+        elements.push(
+          <p key={`p-${lineIndex}`} className="chat-message-text">
+            {parseBoldAndCode(line, role)}
+          </p>
+        );
+      }
+    }
+  });
+
+  if (currentList.length > 0) {
+    elements.push(<ul key={`ul-end`} className="chat-ul">{currentList}</ul>);
+  }
+  return elements;
+};
+
 function TypingIndicator() {
   return (
     <div className="typing-indicator">
@@ -157,7 +212,7 @@ function ChatAssistant() {
             </div>
             <div className="chat-message-content">
               <div className="chat-message-bubble">
-                <p className="chat-message-text">{msg.content}</p>
+                {renderMessageContent(msg.content, msg.role)}
               </div>
               {msg.sources && msg.sources.length > 0 && (
                 <div className="chat-message-sources">
